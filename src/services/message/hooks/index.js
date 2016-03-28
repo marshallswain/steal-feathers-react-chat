@@ -11,7 +11,7 @@ exports.before = {
   all: [
     auth.verifyToken(),
     auth.populateUser(),
-    auth.requireAuth()
+    auth.auth.restrictToAuthenticated()
   ],
   find: [],
   get: [],
